@@ -12,7 +12,7 @@ The following results can be analysed from the app:
 
 
 ## How to find chat data from Whatsapp:
-1-open whatsapp group
+1-open whatsapp group	
 2-tap right-uper corner and goto more option
 3- tap on "Export Chat"
 4- tap on "Without Media"
