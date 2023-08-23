@@ -3,6 +3,8 @@ import preprocessor,helper
 import matplotlib.pyplot as plt
 import seaborn as sns
 import nltk
+
+
 st.sidebar.title("Whatsapp Chat Analyser")
 
 # VADER : is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments.
@@ -53,7 +55,7 @@ if uploaded_file is not None:
             x,new_df = helper.most_busy_users(df)
             fig, ax = plt.subplots()
 
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
 
             with col1:
                 ax.bar(x.index, x.values,color='red')
@@ -81,18 +83,6 @@ if uploaded_file is not None:
         st.pyplot(fig)
     
 
-        # emoji analysis
-        emoji_df = helper.emoji_helper(selected_user,df)
-        st.title("Emoji Analysis")
-
-        col1,col2 = st.beta_columns(2)
-
-        with col1:
-            st.dataframe(emoji_df)
-        with col2:
-            fig,ax = plt.subplots()
-            ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(),autopct="%0.2f")
-            st.pyplot(fig)
 
         # monthly timeline
         st.title("Monthly Timeline")
@@ -112,7 +102,7 @@ if uploaded_file is not None:
 
         # activity map
         st.title('Activity Map')
-        col1,col2 = st.beta_columns(2)
+        col1,col2 = st.columns(2)
 
         with col1:
             st.header("Most busy day")
