@@ -1,7 +1,7 @@
 
 ## Website link
 
-https://whatsapp-analysis-sentiments.herokuapp.com/
+https://whatsappan.streamlit.app/
 
 
 
